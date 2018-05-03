@@ -11,7 +11,7 @@ public class MyBatisGeneratorSqlMap {
 	public void generator() throws Exception {
 		List<String> warnings = new ArrayList<String>();
 		boolean overwrite = true;
-		File configFile = new File("GeneratorConfig.xml");
+		File configFile = new File("GeneratorConfig-base.xml");
 		ConfigurationParser cp = new ConfigurationParser(warnings);
 		Configuration config = cp.parseConfiguration(configFile);
 		DefaultShellCallback callback = new DefaultShellCallback(overwrite);

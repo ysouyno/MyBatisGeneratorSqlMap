@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<context id="caigouTables" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="oracle.jdbc.OracleDriver"
+			connectionURL="jdbc:oracle:thin:@127.0.0.1:1521:orcl" userId="test"
+			password="aaa">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="medicine.base.pojo.po"
+			targetProject=".\src">
+			<property name="enableSubPackages" value="false" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="medicine.base.dao.mapper"
+			targetProject=".\src">
+			<property name="enableSubPackages" value="false" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="medicine.base.dao.mapper" targetProject=".\src">
+			<property name="enableSubPackages" value="false" />
+		</javaClientGenerator>
+
+		<table schema="" tableName="userjd" />
+		<table schema="" tableName="usergys" />
+		<table schema="" tableName="usergysarea" />
+		<table schema="" tableName="useryy" />
+		<table schema="" tableName="dictinfo" />
+		<table schema="" tableName="dicttype" />
+		<table schema="" tableName="basicinfo" />
+		<table schema="" tableName="bss_sys_area" />
+	</context>
+</generatorConfiguration>
